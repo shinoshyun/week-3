@@ -12,8 +12,8 @@ count = 0
 with open("data.csv", "w", encoding="utf-8") as file:
     for information in clist:
         jpg = information["file"].split("jpg")
-        jpg = information["file"].split("JPG")
         date = information["xpostDate"].split("/")
+        # 程式碼示例演示如何使用列表推導方法將列表從字串轉換為整數
         int_list = [int(i) for i in date]
         if int_list[0] >= 2015:
             file.write(information["stitle"]+", " +
@@ -21,10 +21,3 @@ with open("data.csv", "w", encoding="utf-8") as file:
                        information["longitude"] + ", " +
                        information["latitude"]+", " +
                        jpg[0]+"jpg"+"\n")
-
-    # year = information["xpostDate"][:4]
-    # if year >= information["xpostDate"][:4]:
-    # count += 1
-    # print(year)
-    # year = information["xpostDate"][:4]
-    # if year <= year
