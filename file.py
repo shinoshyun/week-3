@@ -1,7 +1,7 @@
-import urllib.request as reguest
+import urllib.request as request
 import json
 src = "https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json"
-with reguest.urlopen(src) as response:
+with request.urlopen(src) as response:
     data = json.load(response)
 
 clist = data["result"]["results"]
