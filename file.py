@@ -9,6 +9,7 @@ clist = data["result"]["results"]
 count = 0
 with open("data.csv", "w", encoding="utf-8") as file:
     for information in clist:
+        # 用 regular expressions 來去篩選  
         jpg = re.split("jpg|JPG",information["file"])
         date = re.split("/",information["xpostDate"])
         # 程式碼示例演示如何使用列表推導方法將列表從字串轉換為整數
